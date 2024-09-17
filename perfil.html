@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Perfil</title>
+  <link rel="stylesheet" href="https://cdn.framework7.io/6.3.10/framework7.bundle.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Asegúrate de tener el CSS importado -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+    /* Incluye aquí cualquier CSS adicional si es necesario */
+  </style>
+</head>
+<body>
+  <div class="page" id="profile-page">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="#" class="panel-open" data-panel="left">
+            <span class="material-symbols-outlined">menu</span>
+          </a>
+        </div>
+        <div class="title">Mi Perfil</div>
+        <div class="right">
+          <a href="#" class="link icon-only">
+            <i class="material-symbols-outlined">settings</i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="page-content">
+      <!-- Panel de perfil -->
+      <div id="panel-profile" class="text-center">
+        <img src="img/a80da1720a3670a9e2b40f5f0601d1b1.jpg" alt="Profile Image" class="img-circle">
+        <h2>Nombre del Usuario</h2>
+        <p class="mail">fiorelamerlo@unitec.edu/p>
+      </div>
+
+      <!-- Lista de opciones del perfil -->
+      <div class="block-title-medium">Opciones</div>
+      <div class="list menu-list">
+        <ul>
+          <li>
+            <a href="/ajustes/" class="item-link item-content">
+              <div class="item-media"><span class="material-symbols-outlined">settings</span></div>
+              <div class="item-inner">
+                <div class="item-title">Ajustes de Cuenta</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/historial/" class="item-link item-content">
+              <div class="item-media"><span class="material-symbols-outlined">history</span></div>
+              <div class="item-inner">
+                <div class="item-title">Historial de Compras</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/soporte/" class="item-link item-content">
+              <div class="item-media"><span class="material-symbols-outlined">help</span></div>
+              <div class="item-inner">
+                <div class="item-title">Soporte Técnico</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/logout/" class="item-link item-content">
+              <div class="item-media"><span class="material-symbols-outlined">logout</span></div>
+              <div class="item-inner">
+                <div class="item-title">Cerrar Sesión</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.framework7.io/6.3.10/framework7.bundle.min.js"></script>
+  <script src="app.js"></script> <!-- El archivo de tu lógica JS -->
+</body>
+</html>
