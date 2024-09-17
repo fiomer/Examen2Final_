@@ -1,4 +1,4 @@
-/// Dom7
+// Dom7
 var $$ = Dom7;
 
 // Init App
@@ -30,6 +30,11 @@ var app = new Framework7({
 		path: '/flyknit/',
     	url: 'flyknit.html',
     	name: 'flyknit',
+  		},
+		{
+		path: '/perfil/',   // Aquí agregas la nueva ruta
+    	url: 'perfil.html', // Asegúrate de tener este archivo
+    	name: 'perfil',
   		}
 	],
 	dialog: {
@@ -51,8 +56,7 @@ var app = new Framework7({
 	}
 });
 
-
-
+// Código adicional para eventos y lógica
 $$('#btnLogin').on('click', function (e) {
 	e.preventDefault();
 	
@@ -66,16 +70,10 @@ $$('#btnLogin').on('click', function (e) {
 	
 });
 
-
-
 $$(document).on('click', '#btnCheckout', function (e) {
 	e.preventDefault();
-
 	
 	app.dialog.confirm('¿Seguro desea finalizar su compra?', function () {
-		
-		//app.dialog.alert('Great!');
-		
 		var notification = app.notification.create({
 		  icon: '<i class="material-icons">check</i>',
 		  title: 'Order',
@@ -86,13 +84,15 @@ $$(document).on('click', '#btnCheckout', function (e) {
 		});
 		notification.open();
 		
-	});
-	
-	
-	
+		// Actualizar nombre y correo dinámicamente en el perfil
+document.addEventListener('DOMContentLoaded', function() {
+  // Suponiendo que tienes los datos del usuario en localStorage o una API
+  var userName = 'John Doe';  // O obtener esto de una API o localStorage
+  var userEmail = 'john.doe@example.com';
+
+  document.querySelector('#panel-profile h2').textContent = userName;
+  document.querySelector('#panel-profile .mail').textContent = userEmail;
 });
 
-
-
-
-
+	});
+});
